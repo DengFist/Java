@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<head>
+<link rel="stylesheet" href="产品页.css">
+<link rel="stylesheet" type="text/css" href="导航栏CSS.css" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="分类页页首.css">
+<script src="jquery.min.js"></script>
+    <link href="bootstrap\css\bootstrap\3.3.6/bootstrap.min.css" rel="stylesheet">
+    <script src="bootstrap\js\bootstrap\3.3.6/bootstrap.min.js"></script>
+    <script>
+
+
+        $(function(){
+    $("input.sortBarPrice").keyup(function(){
+        var num= $(this).val();
+        if(num.length==0){
+            $("div.productUnit").show();
+            return;
+        }
+              
+        num = parseInt(num);
+        if(isNaN(num))
+            num= 1;
+        if(num<=0)
+            num = 1;
+        $(this).val(num);      
+          
+        var begin = $("input.beginPrice").val();
+        var end = $("input.endPrice").val();
+        if(!isNaN(begin) && !isNaN(end)){
+            $("div.productUnit").hide();
+            $("div.productUnit").each(function(){
+                var price = $(this).attr("price");
+                price = new Number(price);
+                if(price<=end && price>=begin)
+                    $(this).show();
+            });
+        }
+          
+    });
+});
+    </script>
+</head>
+    <nav class="top">
+        <a href="首页集合.html"><span class="glyphicon glyphicon-home"></span>首页</a>
+        <span>欢迎来到大川商城</span>
+        <a href="登陆页.html">登陆</a>
+        <a href="#2">注册</a>
+
+        <span class="pull-right">
+            <span class="glyphicon glyphicon-menu-hamburger"></span>
+            <span>我的订单</span>
+        </span>
+    </nav>
+
+<div class="categoryPageDiv">
+        <img src="图片\分类页页首.jpg">
+<div class="categorySortBar">
+    <table class="categorySortBarTable categorySortTable">
+        <tbody><tr>
+            <td class="grayColumn"><a href="#nowhere">综合<span class="glyphicon glyphicon-arrow-down"></span></a></td>
+            <td><a href="#nowhere">人气<span class="glyphicon glyphicon-arrow-down"></span></a></td>
+            <td><a href="#nowhere">新品<span class="glyphicon glyphicon-arrow-down"></span></a></td>
+            <td><a href="#nowhere">销量<span class="glyphicon glyphicon-arrow-down"></span></a></td>
+            <td><a href="#nowhere" class="price">价格<span class="glyphicon glyphicon-resize-vertical"></span></a></td>
+        </tr>
+    </tbody></table>
+    <table class="categorySortBarTable">
+        <tbody><tr>
+            <td><input type="text" placeholder="请输入" class="sortBarPrice beginPrice"></td>
+            <td class="grayColumn priceMiddleColumn">-</td>
+            <td><input type="text" placeholder="请输入" class="sortBarPrice endPrice"></td>
+        </tr>
+    </tbody></table>
+</div>
+    </div>
+
+    <div class="categoryPageDiv">
+<div class="categoryProducts">
+
+
+        <div price="1899" class="productUnit">
+            <div class="productUnitFrame">
+                <a href="#nowhere">
+                    <img width="100px" src="图片\电器4.jpg" class="productImage">
+                </a>
+                <span class="productPrice">¥1899</span>
+                <a href="#nowhere" class="productLink">
+                 松下除湿机家用小型抽湿机卧室空气干燥机除潮干衣吸湿器F-C16YCR
+                </a>
+             
+                <div class="show1 productInfo">
+                    <span class="monthDeal ">月成交 <span class="productDealNumber">16笔</span></span>
+                    <span class="productReview">评价<span class="productReviewNumber">14</span></span>
+                   
+                </div>
+            </div>
+        </div>
+
+
+        <div price="1699" class="productUnit">
+            <div class="productUnitFrame">
+                <a href="#nowhere">
+                    <img width="100px" src="图片\电器2.jpg" class="productImage">
+                </a>
+                <span class="productPrice">¥1699</span>
+                <a href="#nowhere" class="productLink">
+                 科沃斯智能家用扫拖擦地一体机超薄吸尘器地宝
+                </a>
+               
+                <div class="show1 productInfo">
+                    <span class="monthDeal ">月成交 <span class="productDealNumber">49笔</span></span>
+                    <span class="productReview">评价<span class="productReviewNumber">18</span></span>
+                   
+                </div>
+            </div>
+        </div>
+        <div price="999" class="productUnit">
+            <div class="productUnitFrame">
+                <a href="产品页集合.html">
+                    <img width="100px" src="图片\电器1.jpg" class="productImage">
+                </a>
+                <span class="productPrice">¥999</span>
+                <a href="产品页集合.html" class="productLink">
+                 无一人退货!超静音智能全自动洗擦地机器人
+                </a>
+               
+                <div class="show1 productInfo">
+                    <span class="monthDeal ">月成交 <span class="productDealNumber">34笔</span></span>
+                    <span class="productReview">评价<span class="productReviewNumber">16</span></span>
+                  
+                </div>
+            </div>
+        </div>
+        <div price="2250" class="productUnit">
+            <div class="productUnitFrame">
+                <a href="#nowhere">
+                    <img width="100px" src="图片\电器3.jpg" class="productImage">
+                </a>
+                <span class="productPrice">¥2250</span>
+                <a href="#nowhere" class="productLink">
+                 Kelon/科龙1.5匹变频空调挂机冷暖壁挂式
+                </a>
+          
+                <div class="show1 productInfo">
+                    <span class="monthDeal ">月成交 <span class="productDealNumber">25笔</span></span>
+                    <span class="productReview">评价<span class="productReviewNumber">19</span></span>
+               
+                </div>
+            </div>
+        </div>
+        <div price="2099" class="productUnit">
+            <div class="productUnitFrame">
+                <a href="#nowhere">
+                    <img width="100px" src="图片\电器5.jpg" class="productImage">
+                </a>
+                <span class="productPrice">¥2099</span>
+                <a href="#nowhere" class="productLink">
+                 科沃斯规划扫地机器人智能家用一体机擦拖地超薄吸尘米粒地宝DF45
+                </a>
+              
+                <div class="show1 productInfo">
+                    <span class="monthDeal ">月成交 <span class="productDealNumber">17笔</span></span>
+                    <span class="productReview">评价<span class="productReviewNumber">16</span></span>
+                  
+                </div>
+            </div>
+        </div>
+        <div price="5688" class="productUnit">
+            <div class="productUnitFrame">
+                <a href="#nowhere">
+                    <img width="100px" src="图片\电器6.jpg" class="productImage">
+                </a>
+                <span class="productPrice">¥5688</span>
+                <a href="#nowhere" class="productLink">
+                 AO史密斯 家用除雾霾二手烟PM2.5除甲醛数值显示空气净化器
+                </a>
+             
+                <div class="show1 productInfo">
+                    <span class="monthDeal ">月成交 <span class="productDealNumber">5笔</span></span>
+                    <span class="productReview">评价<span class="productReviewNumber">19</span></span>
+                 
+                </div>
+            </div>
+        </div>
+        <div price="2899" class="productUnit">
+            <div class="productUnitFrame">
+                <a href="#nowhere">
+                    <img width="100px" src="图片\电器7.jpg" class="productImage">
+                </a>
+                <span class="productPrice">¥2899</span>
+                <a href="#nowhere" class="productLink">
+                 松下除湿机家用卧室抽湿机小型干燥机地下室吸湿除湿器
+                </a>
+            
+                <div class="show1 productInfo">
+                    <span class="monthDeal ">月成交 <span class="productDealNumber">8笔</span></span>
+                    <span class="productReview">评价<span class="productReviewNumber">19</span></span>
+                 
+                </div>
+            </div>
+        </div>
+        <div price="2699" class="productUnit">
+            <div class="productUnitFrame">
+                <a href="#nowhere">
+                    <img width="100px" src="图片\电器8.jpg" class="productImage">
+                </a>
+                <span class="productPrice">¥2699</span>
+                <a href="#nowhere" class="productLink">
+                 美国惠而浦无线吸尘器家用强力大功率手持小型静音充电除螨机480Y
+                </a>
+          
+                <div class="show1 productInfo">
+                    <span class="monthDeal ">月成交 <span class="productDealNumber">20笔</span></span>
+                    <span class="productReview">评价<span class="productReviewNumber">16</span></span>
+                
+                </div>
+            </div>
+        </div>
+        <div style="clear:both"></div>
+</div>
+    </div>

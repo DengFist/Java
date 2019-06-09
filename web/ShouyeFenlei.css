@@ -1,0 +1,29 @@
+div.categoryMenu{
+    width: 200px;
+    background-color: #e2e2e3;
+    margin-left: 20px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+div.categoryMenu a{
+    color: #000;
+}
+div.categoryMenu a:hover{
+    color: lightskyblue;
+    text-decoration: none;
+}
+
+
+div.eachCategory{
+    line-height: 30px;
+    padding-left: 10px;
+    font-size: 14px;
+}
+div.eachCategory span{
+    margin-right: 10px;
+}
+div.eachCategory:hover{
+    background-color: white;
+}
